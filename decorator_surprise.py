@@ -1,14 +1,16 @@
  
 def decorator_surprise(func):
     """
-        Decorator that will make the function print “surprise!” instead of its original functionality.
+        Decorator that will make the function print “surprise!”
+        instead of its original functionality.
     Args:
         func (function): function to be decorated
     """
 
     def wrapper(*args, **kwargs) -> None:
         """
-            Wrapper function that will print “surprise!” instead of its original functionality.
+            Wrapper function that will print “surprise!” instead
+            of its original functionality.
         """
         print("surprise!")
     return wrapper

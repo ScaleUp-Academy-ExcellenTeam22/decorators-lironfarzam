@@ -42,7 +42,7 @@ def type_check(type_: Type[Any]) -> Any:
     return decorator
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
 
     @type_check(int)
     def add(first_num: int, second_num: int) -> int:

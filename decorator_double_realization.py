@@ -45,7 +45,7 @@ def print_int(num: int):
     Args:
         num (int): number to print
     """
-    print (num)
+    print(num)
 
 
 if __name__ == '__main__':

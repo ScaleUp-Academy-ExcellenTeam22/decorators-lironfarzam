@@ -18,7 +18,8 @@ def type_check(type_: Type[Any]) -> Any:
         Args:
             func (Any): The function to decorate.
         Raises:
-            TypeError: If the argument passed to the decorated function is not of the expected type.
+            TypeError: If the argument passed to the decorated function is not of the
+            expected type.
         Returns:
             Any: The decorated function.
         """
@@ -28,7 +29,8 @@ def type_check(type_: Type[Any]) -> Any:
             Decorator to check the type of the argument passed to the decorated function. 
             
             Raises:
-                TypeError: If the argument passed to the decorated function is not of the expected type.
+                TypeError: If the argument passed to the decorated function is not of
+                the expected type.
             Returns:
                 Any: The decorated function.
             """            
@@ -43,33 +45,33 @@ def type_check(type_: Type[Any]) -> Any:
 if __name__== "__main__":
 
     @type_check(int)
-    def add(x: int, y: int) -> int:
+    def add(first_num: int, second_num: int) -> int:
         """
         Function to add two numbers
 
         Args:
-            x (int): First number
-            y (int): Second number
+            first_num (int): First number
+            second_num (int): Second number
 
         Returns:
-            int: Sum of x and y
+            int: Sum of first_num and second_num
         """
 
-        return x + y
+        return first_num + second_num
 
     @type_check(float)
-    def div(x: float, y: float) -> float:
+    def div(first_num: float, second_num: float) -> float:
         """
         Function to divide two numbers
 
         Args:
-            x (float): First number
-            y (float): Second number
+            first_num (float): First number
+            second_num (float): Second number
 
         Returns:
-            float: Division of x and y
+            float: Division of first_num and second_num
         """
-        return x / y
+        return first_num / second_num if second_num != 0 else 0
 
     try:
         print(add(1, 2))
@@ -79,8 +81,7 @@ if __name__== "__main__":
         # print(div(1, "2"))
         # print(div(1, 2.0))
         # print(div(8.0, 2.0))
-        # print(div(8.0, 0.0))
+        print(div(8.0, 1.0))
 
-    except TypeError as e:
-        print(e)
-
+    except TypeError as exception:
+        print(exception)

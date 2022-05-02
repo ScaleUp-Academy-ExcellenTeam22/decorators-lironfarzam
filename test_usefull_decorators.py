@@ -1,20 +1,19 @@
 from functools import cache
 
-""" - cache(decorator) - 
+"""
+ - cache(decorator) - 
 
     Cache decorator is used to cache the result of a function.
     in this case, the Fibonacci sequence is the sum of the previous two numbers.
     each time the function is called, the result is cached and returned and not
     calculated again.
-"""
 
-""" - property (decorator) - 
+- property (decorator) - 
 
     Property decorator is used to create a property of a class instance that can be
     accessed as an attribute.
-"""
 
-""" - staticmethod (decorator) -
+- staticmethod (decorator) -
 
     Staticmethod decorator is used to create a static method of a class instance that
     can be accessed as an attribute.
